@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+body{
+	font-family: 'Ubuntu', sans-serif;
+
+}
 
 html {
   scroll-behavior: smooth;
 }
 .pnav{
 	position:fixed;
-	margin-left:800px;
+	margin-left:700px;
+	
 }
 .snav{
 	position:fixed;
@@ -19,6 +26,8 @@ html {
     padding:14px 16px;
     text-decoration:none;
     font-size:18px;
+	font-family: 'Ubuntu', sans-serif;
+
 }
 .sidebar ul {
 	padding:8px 0 0 0;
@@ -211,6 +220,7 @@ html {
 	.alignments {
 	 padding-top:80px;
 	 margin-top:100px;
+	 font-family: 'Ubuntu', sans-serif;
 	}
 	.alignments img{
 	 width:80%;
@@ -223,6 +233,7 @@ html {
 	.skills {
 	 padding-top:150px;
 	 margin-left:50px;
+	 font-family: 'Ubuntu', sans-serif;
 	} 
 	.softwares li{
 	 display:inline;
