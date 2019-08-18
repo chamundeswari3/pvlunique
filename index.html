@@ -32,6 +32,30 @@
 	background-repeat: no-repeat;
 	background-attachment:fixed;
     }	
+	
+	.scroll{
+    background-color:#0e131a;
+	height:80px;
+	width:100%;
+	position:fixed;
+	 box-shadow: 0 5px 6px -7px grey;
+}
+nav{
+    height: 60px;
+    background-color: transparent;
+ position:fixed;
+ 
+  top: 0;
+  width: 100%;
+  transition: 0.7s;
+}
+html    {
+    scroll-behavior: smooth;
+}
+.btn-lg a
+{
+text-decoration:none;
+}
 </style>
 	
 </head>
@@ -39,7 +63,7 @@
 <body>
 
 <div class="container-fluid banner" id="01">
-<nav class="sidebar p-2">
+<nav class="sidebar p-2 sticky-top" id="nav">
   <span class="open-slide snav" onclick="openSlideMenu()">
     <a href="#">
       <svg width="30" height="30">
@@ -76,16 +100,16 @@
 <div class="container-fluid">
   <div align=center class="btext">
 	<img src="Assets/Images/lahari.jpg" data-aos="zoom-in" class="mx-auto rounded-circle" width=200px height=200px/>
-			<h1 data-aos="fade-up" data-aos-easing="ease" data-aos-delay="300" class="text-white p-2 display-3">p.v.lahari</h1>
+			<h1 data-aos="fade-up" data-aos-easing="ease" data-aos-delay="300" class="text-white p-2 display-3">P.V.Lahari</h1>
 			<p data-aos="fade-up" data-aos-easing="ease" data-aos-delay="500"class="text-center about p-3 text-white" align=justify>Web Designer / UI Developer</p>
 			<button data-aos="fade-up" data-aos-easing="ease" data-aos-delay="700" class="br btn btn-outline-light btn-lg mr-2">Hire me</button>
-			<button data-aos="fade-up" data-aos-easing="ease" data-aos-delay="700" class="br btn btn-outline-light btn-lg mr-2"><a target="_blank" href="Assets/resume.pdf" class="text-white">See Resume</a></button>
+			<button data-aos="fade-up" data-aos-easing="ease" data-aos-delay="700" class="br btn btn-outline-light btn-lg mr-2"><a target="_blank" class="" href="Assets/resume.pdf" >See Resume</a></button>
 			<br /><span class="arrow"><a href="#02" ><i class="text-white mt-5 fas fa-chevron-circle-down"></i><a/></span>
  </div>
 </div>
-
+</div>
               <!--banner ends-->
-</div>			  
+			  
               <!--about starts-->
 			   
 <div class="container alignments" id="02">
@@ -200,8 +224,8 @@
 			   
                <!--qualification starts-->
 		
-<div class="cd-timeline cd-container" id="04">
-  <h1 class="text-center qualification text-white mt-5 pt-5" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="200">My Qualification</h1>
+<div class="cd-timeline cd-container" id="04" style="font-family: 'Ubuntu', sans-serif;">
+  <h1 class="text-center qualification text-white mt-5 pt-5" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="200" style="font-family: 'Ubuntu', sans-serif;">My Qualification</h1>
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
 				<img src="Assets/Images/ssc.png" class="education" alt="Picture">
@@ -258,7 +282,7 @@
                 <!--services starts-->
 
    
- <div class="container mt-5" id="05">    
+ <div class="container mt-5" id="05" style="font-family: 'Ubuntu', sans-serif;">    
 	  <h1 class="text-center mt-5 text-white alignments" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="200">My Services</h1>
         <div class="row mt-5">      
           <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 services" data-aos="flip-up" data-aos-easing="ease" data-aos-delay="600">
@@ -299,7 +323,7 @@
 
                 <!--portfolio starts-->
 
-<section id="06" class="containerpf pf">				
+<section id="06" class="containerpf pf" style="font-family: 'Ubuntu', sans-serif;">				
     <h1 class="text-center text-white m-5" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="100">My Portfolio</h1>
 	<ul class="works mb-5 text-white" data-aos="fade-left" data-aos-easing="ease" data-aos-delay="400">
 	 <li onclick="portfolio(1)" class="portfolio mr-5">My Projects</li>
@@ -370,10 +394,10 @@
 				
                  <!--footer starts-->			
 	
-<div class="container footer" id="07">	
-    <h1 class="text-center text-white" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="200">Leave a Message</h1>
+<div class="container footer" id="07" >	
+    <h1 class="text-center text-white" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="200" style="font-family: 'Ubuntu', sans-serif;">Leave a Message</h1>
 <div class="row">
-	  <div class="mt-5 mb-0">
+	  <div class="mt-5 mb-0" style="font-family: 'Ubuntu', sans-serif;">
 	       <form id="defaultForm" method="post" class="form-horizontal" action="target.php">
                     <div class="alert alert-success" style="display: none;"></div>
             <div class="row ml-auto footer1">
@@ -520,6 +544,18 @@ $(function(){
     }).trigger('scroll');
 
 });
+</script>
+<script>
+window.onscroll = function(){
+    if( document.documentElement.scrollTop > 20){
+        document.getElementById('nav').classList.add('scroll');
+        
+    }
+    else{
+        document.getElementById('nav').classList.remove('scroll');
+
+    }
+}
 </script>
 
 </body>
