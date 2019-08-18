@@ -226,6 +226,8 @@ html {
 	 width:80%;
 	 height:450px;
 	 margin:0px;
+	border-bottom-right-radius:50px;
+	 border-top-left-radius:50px;
 	}
 	.ab {
 	margin-top:50px;
